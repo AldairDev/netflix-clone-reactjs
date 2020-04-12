@@ -1,12 +1,13 @@
 body {
   margin: 0;
   font-family: "Helvetica";
-  /* background-image: url(../images/bg.jpg); */
-  /* height: 60vh; */
+  box-sizing: border-box;
   color: white;
-  
+  background: #000000;
 }
-
+h1 {
+  font-size: 20px;
+}
 .hearder-content{
     /* background: radial-gradient(black, red); */
     background: red;

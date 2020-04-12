@@ -33,6 +33,7 @@ const HeaderComponent = styled.div`
     font-weight: 400;
     font-size: 1rem;
     position: absolute;
+    z-index : 2;
   }
 `;
 
@@ -43,6 +44,7 @@ const Image = styled.img`
   margin: 1.9rem 2.6rem;
   left: 0;
   position: absolute;
+  z-index : 2;
 `;
 
 export { Header };
