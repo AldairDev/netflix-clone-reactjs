@@ -15,7 +15,6 @@ const Index = ({ height, width, text, textSize }) => {
 };
 
 const Button = styled.div`
-
   background: #e50914;
 
   button {
@@ -31,8 +30,10 @@ const Button = styled.div`
     font-size: ${(props) => props.textSize};
     margin: 0;
     padding: 0;
+    cursor: pointer;
+
   }
-  Button:hover{
+  Button:hover {
     background: #fb1823;
   }
 `;

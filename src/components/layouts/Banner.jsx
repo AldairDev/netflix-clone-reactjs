@@ -38,6 +38,7 @@ const Background = styled.div`
     url(${({ bg }) => bg});
   min-height: 85vh;
   border-bottom: 8px solid #222;
+  
   .email-form {
     display: flex;
     align-items: flex-end;
@@ -54,7 +55,6 @@ const Background = styled.div`
   h1 {
     font-size: 3.8rem;
     padding: 1rem 11rem;
-    margin: 0;
   }
   p {
     margin: 0;
