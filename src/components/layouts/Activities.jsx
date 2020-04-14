@@ -2,26 +2,47 @@ import React from "react";
 import styled from "styled-components";
 import tv from "../../assets/images/tv.png";
 
-const Activities = () => {
+const Activities = ({ activity, index }) => {
+  const { title, description, img } = activity;
+
+  const residuo = index % 2;
+
   return (
     <Div>
       <div className="card-animation">
-        <div className="card-text">
-          <h1>Disfruta en tu TV.</h1>
-          <h2>
-            Ve en smart TV, PlayStation, Xbox, Chromecast, Apple TV,
-            reproductores de Blu-ray y más.
-          </h2>
-        </div>
-        <div className="video-animation">
-          <img src={tv} alt="tv" height="360px" />
-          <video autoPlay muted loop>
-            <source
-              src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv.m4v"
-              type="video/mp4"
-            />
-          </video>
-        </div>
+        {residuo === 0 ? (
+          <>
+            <div className="card-text">
+              <h1>{title}</h1>
+              <h2>{description}</h2>
+            </div>
+            <div className="video-animation">
+              <img src={tv} alt="tv" height="360px" />
+              <video autoPlay muted loop>
+                <source
+                  src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv.m4v"
+                  type="video/mp4"
+                />
+              </video>
+            </div>
+          </>
+        ) : (
+          <>
+            <div className="video-animation">
+              <img src={tv} alt="tv" height="360px" />
+              <video autoPlay muted loop>
+                <source
+                  src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv.m4v"
+                  type="video/mp4"
+                />
+              </video>
+            </div>
+            <div className="card-text">
+              <h1>{title}</h1>
+              <h2>{description}</h2>
+            </div>
+          </>
+        )}
       </div>
     </Div>
   );
@@ -40,7 +61,6 @@ const Div = styled.div`
   h2 {
     margin: 0;
     font-size: 1.6rem;
-    /* font-weight: normal; */
   }
   .card-text {
     margin: 0 10px;

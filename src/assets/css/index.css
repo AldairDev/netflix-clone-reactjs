@@ -9,7 +9,11 @@ h1 {
   margin:0;
   font-size: 20px;
 }
-.hearder-content{
-    /* background: radial-gradient(black, red); */
-    background: red;
+
+.email-form {
+  display: flex;
+  align-items: flex-end;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  position: relative;
 }

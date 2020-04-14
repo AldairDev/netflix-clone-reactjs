@@ -14,8 +14,8 @@ const Banner = ({ children }) => {
           <div className="email-form">
             <Input width="450px" height="61.4px" />
             <Button
-              width="330px"
               height="65px"
+              width="330px"
               text="PROBAR AHORA"
               textSize={"1.8rem"}
             />
@@ -39,13 +39,6 @@ const Background = styled.div`
   min-height: 85vh;
   border-bottom: 8px solid #222;
   
-  .email-form {
-    display: flex;
-    align-items: flex-end;
-    margin-top: 30px;
-    margin-bottom: 10px;
-    position: relative;
-  }
   h4{
     margin: 0;
     padding: 0;

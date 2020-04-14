@@ -1,0 +1,25 @@
+[
+    {
+        "id": 1,
+        "title": "Disfruta en tu TV",
+        "description":
+          "Ve en smart TV, PlayStation, Xbox, Chromecast, Apple TV, reproductores de Blu-ray y más.",
+        "img":
+          "https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/tv.png"
+      },
+      {
+        "id": 2,
+        "title": "Descarga contenidos para ver donde vayas.",
+        "description": "Disfruta offline tus películas y programas favoritos.",
+        "img":
+          "https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/tv.png"
+      },
+      {
+        "id": 3,
+        "title": "Disfruta donde quieras.",
+        "description":
+          "Películas y programas ilimitados en tu teléfono, tablet, computadora y TV sin costo extra.",
+        "img":
+          "https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/device-pile.png"
+      }
+]
