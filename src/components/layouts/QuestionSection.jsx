@@ -1,20 +1,32 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 
 const QuestionSection = ({ data }) => {
-  const [showAnwser, setShowAnwser] = useState(false);
+  const [showAnwser, setShowAnwser] = useState([]);
 
-  const showAnswerDiv = () => {
-    setShowAnwser(!showAnwser);
+  useEffect(() => {
+    setShowAnwser(data);
+  }, [data]);
+
+  const openAnswer = (index) => {
+    setShowAnwser(
+      showAnwser.map((i) =>
+        i.id === index ? { ...i, visibility: !i.visibility } : i
+      )
+    );
   };
+//   console.log(showAnwser.filter((t) => t.visibility === true));
+
   return (
     <WraperQuestion>
       <h1>Preguntas Frecuentes </h1>
       <ul>
         {data.map((question, i) => (
           <li key={i}>
-            <button onClick={showAnswerDiv}>{question.title}</button>
-            {showAnwser===true && <div className="question-description">{question.description}</div>}
+            <button onClick={() => openAnswer(i)}>{question.title}</button>
+            {showAnwser.visibility === true && (
+              <div className="question-description">{question.description}</div>
+            )}
           </li>
         ))}
       </ul>
@@ -63,6 +75,7 @@ const WraperQuestion = styled.div`
     text-align: left;
     max-height: 1200px;
     margin-bottom: 2px;
+    transition: max-height 0.25s cubic-bezier(0.5, 0, 0.1, 1);
   }
 `;
 
