@@ -23,6 +23,7 @@ export const Index = () => {
       <Header />
       {numberOfActivities}
       <QuestionSection data={questions} />
+      {/* <FormInput /> */}
     </>
   );
 };

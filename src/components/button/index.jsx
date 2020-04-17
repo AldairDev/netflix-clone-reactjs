@@ -31,7 +31,7 @@ const Button = styled.div`
     margin: 0;
     padding: 0;
     cursor: pointer;
-
+    outline: none;  
   }
   Button:hover {
     background: #fb1823;

@@ -1,8 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import bg from "../../assets/images/bg.jpg";
-import { Index as Button } from "../button";
-import Input from "../input/Index";
+// import { Index as Button } from "../button";
+// import Input from "../input/Index";
+import {Index as FormInput} from '../form-input/Index'
 const Banner = ({ children }) => {
   return (
     <>
@@ -11,7 +12,8 @@ const Banner = ({ children }) => {
         <div className="hero">
           <h1>Programas y películas sin límite y mucho más.</h1>
           <p>Disfruta donde quieras. Cancela en cualquier momento.</p>
-          <div className="email-form">
+          <FormInput />
+          {/* <div className="email-form">
             <Input width="450px" height="61.4px" />
             <Button
               height="65px"
@@ -19,7 +21,7 @@ const Banner = ({ children }) => {
               text="PROBAR AHORA"
               textSize={"1.8rem"}
             />
-          </div>
+          </div> */}
           <h4>
             ¿Quieres ver Netflix ya? Ingresa tu email para crear una cuenta de
             Netflix o acceder a la tuya.
@@ -39,12 +41,6 @@ const Background = styled.div`
   min-height: 85vh;
   border-bottom: 8px solid #222;
   
-  h4{
-    margin: 0;
-    padding: 0;
-    font-size: 1.16rem;
-    font-weight: 300; 
-  }
   h1 {
     font-size: 3.8rem;
     padding: 1rem 11rem;
