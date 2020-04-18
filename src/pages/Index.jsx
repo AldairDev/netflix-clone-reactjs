@@ -2,11 +2,11 @@ import React, { useState, useEffect } from "react";
 import { Header } from "../components/layouts/Header";
 import { Activities } from "../components/layouts/Activities";
 import { QuestionSection } from "../components/layouts/QuestionSection";
+import { Footer } from "../components/layouts/Footer";
 import "../assets/css/index.css";
 import data from "../data.json";
 export const Index = () => {
-
-  const {activities, questions} = data
+  const { activities, questions } = data;
 
   const [dataActivities, setDataActivities] = useState([]);
   useEffect(() => {
@@ -23,7 +23,7 @@ export const Index = () => {
       <Header />
       {numberOfActivities}
       <QuestionSection data={questions} />
-      {/* <FormInput /> */}
+      <Footer />
     </>
   );
 };

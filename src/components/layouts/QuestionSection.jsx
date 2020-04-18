@@ -24,7 +24,7 @@ const QuestionSection = ({ data }) => {
       <ul>
         {showAnwser.map((question, i) => (
           <li key={i}>
-            <div className="button-container">
+            <div>
               <button className="button-question" onClick={() => openAnswer(i)}>
                 {question.title}
               </button>
@@ -37,13 +37,13 @@ const QuestionSection = ({ data }) => {
       </ul>
       <div>
         <ul>
-            <div className="form-input">
-              <FormInput />
-            </div>
-            <h4>
-              ¿Quieres ver Netflix ya? Ingresa tu email para crear una cuenta de
-              Netflix o acceder a la tuya.
-            </h4>
+          <div className="form-input">
+            <FormInput />
+          </div>
+          <h4>
+            ¿Quieres ver Netflix ya? Ingresa tu email para crear una cuenta de
+            Netflix o acceder a la tuya.
+          </h4>
         </ul>
       </div>
     </WraperQuestion>
@@ -61,19 +61,20 @@ const WraperQuestion = styled.div`
     font-size: 3rem;
   }
   li {
-    margin: 0.5rem 30rem;
+    margin: 0.5rem auto;
     background-color: black;
-    list-style: none;
+    width: 815px;
   }
   ul {
     padding-top: 3rem;
     margin: 0 auto;
   }
-  .form-input{
+  .form-input {
     display: flex;
     justify-content: center;
     margin-top: -1.2rem;
   }
+
   .button-question {
     text-decoration: none;
     font-size: 1.6rem;
